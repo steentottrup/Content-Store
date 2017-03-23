@@ -1,4 +1,4 @@
-### Web Administration UI
+# Web Administration UI
 
 To help you get started, Content Store includes a web UI for the administration of content.
 
