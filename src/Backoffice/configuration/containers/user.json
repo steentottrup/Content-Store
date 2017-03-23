@@ -1,0 +1,16 @@
+﻿{
+  "name": "user",
+  "contentTypes": [ "user", "userFolder" ],
+  "indexes": [
+    {
+      "field": "csUsername",
+      "order": "ascending",
+      "unique": true
+    },
+    {
+      "fields": [ "csUsername", "csPassword", "csPasswordData" ],
+      "order": "ascending"
+    }
+  ],
+  "database": "main"
+}

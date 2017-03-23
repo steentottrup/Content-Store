@@ -1,0 +1,53 @@
+﻿{
+  "name": "user",
+  "parentTypes": ["node"],
+  "fields": [
+    {
+      "name": "csUsername",
+      "dataType": "string",
+      "editable": true,
+      "requirements": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "unique"
+        },
+        {
+          "type": "minimumLength",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "csPassword",
+      "dataType": "encryptedstring",
+      "editable": true,
+      "requirements": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "minimumLength",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "name": "emailAddress",
+      "dataType": "string",
+      "editable": true,
+      "requirements": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "emailAddress"
+        },
+        {
+          "type": "unique"
+        }
+      ]
+    }
+  ]
+}

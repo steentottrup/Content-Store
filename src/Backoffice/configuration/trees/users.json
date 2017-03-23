@@ -1,0 +1,20 @@
+﻿{
+  "name": "users",
+  "sorting": {
+    "type": "alphabetical",
+    "fieldName": "csName"
+  },
+  "contentTypes": [
+    {
+      "name": "user",
+      "allowedChildren": [ ],
+      "visibleInTree": true
+    },
+    {
+      "name": "userFolder",
+      "allowedChildren": [ "user" ],
+      "visibleInTree": true
+    }
+  ],
+  "root": "userFolder"
+}

@@ -1,0 +1,16 @@
+﻿{
+  "name": "file",
+  "parentTypes": ["node"],
+  "fields": [
+    {
+      "name": "csFileType",
+      "dataType": "string",
+      "editable": true,
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    }
+  ]
+}

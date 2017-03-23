@@ -1,0 +1,24 @@
+﻿{
+  "name": "editionedString",
+  "fields": [
+    {
+      "name": "edition",
+      "dataType": "string",
+      "editable": true,
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    },
+    {
+      "name": "value",
+      "dataType": "string",
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    }
+  ]
+}

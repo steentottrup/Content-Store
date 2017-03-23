@@ -1,0 +1,20 @@
+﻿{
+  "name": "pages",
+  "sorting": {
+    "type": "sortOrder",
+    "fieldName": "csSortOrder"
+  },
+  "templates": [
+    {
+      "name": "page",
+      "allowedChildren": [ "page", "listItem" ],
+      "visibleInTree": true
+    },
+    {
+      "name": "listItem",
+      "allowedChildren": [ "page", "listItem" ],
+      "visibleInTree": false
+    }
+  ],
+  "root": "page"
+}

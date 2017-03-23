@@ -1,0 +1,27 @@
+﻿{
+  "name": "page",
+  "parentTypes": ["node"],
+  "fields": [
+    {
+      "name": "csSortOrder",
+      "dataType": "integer",
+      "editable": true,
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    },
+    {
+      "name": "title",
+      "dataType": "array",
+      "requirements": [
+        {
+          "type": "unique",
+          "field": "edition"
+        }
+      ],
+      "subDataType": "editionedString"
+    }
+  ]
+}

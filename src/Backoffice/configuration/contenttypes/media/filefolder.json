@@ -1,0 +1,5 @@
+﻿{
+  "name": "filefolder",
+  "parentTypes": ["folder"],
+  "fields": []
+}

@@ -1,0 +1,56 @@
+﻿{
+  "name": "node",
+  "parentTypes": [],
+  "fields": [
+    {
+      "name": "csName",
+      "dataType": "string",
+      "editable": true,
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    },
+    {
+      "name": "csCreated",
+      "dataType": "datetime",
+      "editable": false,
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    },
+    {
+      "name": "csLastChanged",
+      "dataType": "datetime",
+      "editable": false,
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    },
+    {
+      "name": "csAuthor",
+      "dataType": "id",
+      "editable": false,
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    },
+    {
+      "name": "csLstEditedBy",
+      "dataType": "id",
+      "editable": false,
+      "requirements": [
+        {
+          "type": "required"
+        }
+      ]
+    }
+  ]
+}

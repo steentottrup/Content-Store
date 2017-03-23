@@ -1,0 +1,5 @@
+﻿{
+  "name": "folder",
+  "parentTypes": ["node"],
+  "fields": []
+}
