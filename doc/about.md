@@ -1,4 +1,4 @@
-### About
+# About
 
 Content Store is a headless (decoupled) content management system.
 
