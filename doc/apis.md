@@ -1,6 +1,6 @@
-# Content Store Api
+# Apis
 
-The Content Store solution, being a headless/decoupled content management system, has a powerful Api to access the content it stores. The solution actually includes 2 Apis, one is commonly referred to as the Api, the Content Store Api, the other is the Content Store Back Office Api.
+The Content Store solution, being a headless/decoupled content management system, has a powerful, but simple, Api to access the content it stores. The solution actually includes 2 Apis, one is commonly referred to as the Api, the Content Store Api, the other is the Content Store Back Office Api.
 
 ## Content Store Api
 The Api you should use to create, read, update and delete content in your Content Store solution.
@@ -37,9 +37,21 @@ https://<siteurl>/api/tree/<treename>/<id>
 
 (TODO)
 
-#### Deleting a content element
+#### Updating a content element with PATCH
+The actual call to the Api to update a content element is simple, you just need to make a HTTPS PATCH request to this url:
+
+```
+https://<siteurl>/api/tree/<treename>/<id>
+```
 
 (TODO)
+
+#### Deleting a content element
+The actual call to the Api to delete a content element is simple, you just need to make a HTTPS DELETE request to this url:
+
+```
+https://<siteurl>/api/tree/<treename>/<id>
+```
 
 #### Getting content without using trees
 All content in Content Store is place in a container. To get a given content element, you need to know the name of this container and the Id of the element. To get the content, you need to make a simple HTTPS GET request to this url:

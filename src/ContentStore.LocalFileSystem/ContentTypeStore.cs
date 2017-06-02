@@ -12,7 +12,7 @@ namespace ContentStore.LocalFileSystem {
 
 		protected virtual String GetTemplateRoot() {
 			// TODO: Config
-			return "configuration\\templates";
+			return "contenttypes";
 		}
 
 		private String[] GetAllTemplates() {

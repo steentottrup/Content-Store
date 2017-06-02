@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "del": "2.2.0",
+    "typings": "2.1.0"
+  },
+  "dependencies": {
+    "knockout": "3.4.1",
+    "requirejs": "2.3.3",
+    "requirejs-text": "2.0.15"
+  }
+}

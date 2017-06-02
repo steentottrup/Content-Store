@@ -1,0 +1,13 @@
+﻿<h1>Dasboard</h1>
+	<!-- ko component: { name: 'trees', params: { } } -->
+	<!-- /ko -->
+<p data-bind="with: app.currentPage">
+		<!-- ko with: currentTree -->
+			<!-- ko component: { name: 'tree', params: { id: $data } } -->
+			<!-- /ko -->
+		<!-- /ko -->
+		<!-- ko with: currentContentEditor -->
+			<!-- ko component: { name: 'editcontent', params: { id: $data, tree: $parent.currentTree() } } -->
+			<!-- /ko -->
+		<!-- /ko -->
+</p>

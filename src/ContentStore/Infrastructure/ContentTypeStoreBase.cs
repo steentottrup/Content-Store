@@ -3,7 +3,7 @@ using System;
 
 namespace ContentStore.Infrastructure {
 
-	public abstract class ContentTypeStoreBase : IContentTypeStore {
+	public abstract class ContentTypeStoreBase : IReadonlyContentTypeStore {
 		protected readonly ICacheService cache;
 		protected readonly IContentTypeParser parser;
 

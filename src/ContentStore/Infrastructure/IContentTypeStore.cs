@@ -3,8 +3,6 @@ using System;
 
 namespace ContentStore.Infrastructure {
 
-	public interface IContentTypeStore {
-		Boolean Exists(String name);
-		IContentType Get(String name);
+	public interface IContentTypeStore : IReadonlyContentTypeStore {
 	}
 }

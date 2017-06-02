@@ -16,7 +16,7 @@ namespace ContentStore.JsonSettings {
 			}
 		}
 
-		public override IContentType Parse(Stream stream, IContentTypeStore templateStore) {
+		public override IContentType Parse(Stream stream, IReadonlyContentTypeStore templateStore) {
 			TextReader reader = new StreamReader(stream, Encoding.UTF8);
 			Internals.ContentType tmp = JsonConvert.DeserializeObject<Internals.ContentType>(reader.ReadToEnd());
 

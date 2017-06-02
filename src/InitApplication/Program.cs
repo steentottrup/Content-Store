@@ -28,7 +28,7 @@ namespace InitApplication {
 			Boolean reinit = true;
 
 			IContainerParser parser = new ContentStore.JsonSettings.JsonContainerParser();
-			IContainerStore store = new ContentStore.LocalFileSystem.ContainerStore(null, parser, solutionConfigurationRoot);
+			IReadonlyContainerStore store = new ContentStore.LocalFileSystem.ContainerStore(null, parser, solutionConfigurationRoot);
 
 			// ***** END OF CONFIG
 

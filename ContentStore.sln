@@ -1,26 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{17458127-130F-4997-904F-42C6C1394E99}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{823015C2-9A3D-4F78-81C2-2C7B6490E722}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ContentStore", "src\ContentStore\ContentStore.xproj", "{8D99D563-0310-495D-B7BE-61A8EDD8CE20}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ContentStore.Api", "src\ContentStore.Api\ContentStore.Api.xproj", "{E292EF05-2EB0-456B-A8EC-255CB20D9200}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ContentStore.BackOffice.Api", "src\ContentStore.BackOffice.Api\ContentStore.BackOffice.Api.xproj", "{E1EBD555-5C86-45FC-86BB-6E62CB457A09}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Backoffice", "src\Backoffice\Backoffice.xproj", "{072286A7-A05A-4262-A901-A83B59338C77}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ContentStore.JsonSettings", "src\ContentStore.JsonSettings\ContentStore.JsonSettings.xproj", "{5A093785-3B96-4367-8041-B90E9F34E51D}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ContentStore.LocalFileSystem", "src\ContentStore.LocalFileSystem\ContentStore.LocalFileSystem.xproj", "{55B6D4D4-209D-4B06-9D11-C42A571E831A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{BA6B11DE-EDB2-40A3-937D-63F95CE2D526}"
 	ProjectSection(SolutionItems) = preProject
@@ -34,11 +19,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{711396A8-B38F-43D7-ABE3-6FAF4B6DD8E2}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "InitApplication", "src\InitApplication\InitApplication.xproj", "{AFBC655F-02F8-4009-8AC1-C729177F258D}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ContentStore.BackOffice", "src\ContentStore.BackOffice\ContentStore.BackOffice.xproj", "{17AD5FD5-BF98-403D-99F6-126D5B2A45E3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{2672DF87-9C27-4E6E-8F58-3E5C1E9B3D0F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentStore", "src\ContentStore\ContentStore.csproj", "{8D99D563-0310-495D-B7BE-61A8EDD8CE20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentStore.Api", "src\ContentStore.Api\ContentStore.Api.csproj", "{E292EF05-2EB0-456B-A8EC-255CB20D9200}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentStore.BackOffice.Api", "src\ContentStore.BackOffice.Api\ContentStore.BackOffice.Api.csproj", "{E1EBD555-5C86-45FC-86BB-6E62CB457A09}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backoffice", "src\Backoffice\Backoffice.csproj", "{072286A7-A05A-4262-A901-A83B59338C77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentStore.JsonSettings", "src\ContentStore.JsonSettings\ContentStore.JsonSettings.csproj", "{5A093785-3B96-4367-8041-B90E9F34E51D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentStore.LocalFileSystem", "src\ContentStore.LocalFileSystem\ContentStore.LocalFileSystem.csproj", "{55B6D4D4-209D-4B06-9D11-C42A571E831A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InitApplication", "src\InitApplication\InitApplication.csproj", "{AFBC655F-02F8-4009-8AC1-C729177F258D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentStore.BackOffice", "src\ContentStore.BackOffice\ContentStore.BackOffice.csproj", "{17AD5FD5-BF98-403D-99F6-126D5B2A45E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,15 +80,15 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{711396A8-B38F-43D7-ABE3-6FAF4B6DD8E2} = {17458127-130F-4997-904F-42C6C1394E99}
+		{2672DF87-9C27-4E6E-8F58-3E5C1E9B3D0F} = {17458127-130F-4997-904F-42C6C1394E99}
 		{8D99D563-0310-495D-B7BE-61A8EDD8CE20} = {17458127-130F-4997-904F-42C6C1394E99}
 		{E292EF05-2EB0-456B-A8EC-255CB20D9200} = {17458127-130F-4997-904F-42C6C1394E99}
 		{E1EBD555-5C86-45FC-86BB-6E62CB457A09} = {17458127-130F-4997-904F-42C6C1394E99}
 		{072286A7-A05A-4262-A901-A83B59338C77} = {17458127-130F-4997-904F-42C6C1394E99}
 		{5A093785-3B96-4367-8041-B90E9F34E51D} = {2672DF87-9C27-4E6E-8F58-3E5C1E9B3D0F}
 		{55B6D4D4-209D-4B06-9D11-C42A571E831A} = {2672DF87-9C27-4E6E-8F58-3E5C1E9B3D0F}
-		{711396A8-B38F-43D7-ABE3-6FAF4B6DD8E2} = {17458127-130F-4997-904F-42C6C1394E99}
 		{AFBC655F-02F8-4009-8AC1-C729177F258D} = {711396A8-B38F-43D7-ABE3-6FAF4B6DD8E2}
 		{17AD5FD5-BF98-403D-99F6-126D5B2A45E3} = {17458127-130F-4997-904F-42C6C1394E99}
-		{2672DF87-9C27-4E6E-8F58-3E5C1E9B3D0F} = {17458127-130F-4997-904F-42C6C1394E99}
 	EndGlobalSection
 EndGlobal

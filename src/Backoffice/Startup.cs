@@ -38,12 +38,21 @@ namespace Backoffice
             loggerFactory.AddDebug();
 
 
-			ContentStore.JsonSettings.JsonContentTypeParser parser = new ContentStore.JsonSettings.JsonContentTypeParser();
-			ContentStore.LocalFileSystem.ContentTypeStore templateStore = new ContentStore.LocalFileSystem.ContentTypeStore(null, parser);
-			templateStore.Get("page");
+			//ContentStore.JsonSettings.JsonContentTypeParser parser = new ContentStore.JsonSettings.JsonContentTypeParser();
+			//ContentStore.LocalFileSystem.ContentTypeStore templateStore = new ContentStore.LocalFileSystem.ContentTypeStore(null, parser);
+			//templateStore.Get("page");
 
-
-            app.UseMvc();
-        }
-    }
+			app.UseDefaultFiles();
+			app.UseStaticFiles();
+			app.UseMvc(routes => {
+				routes.MapRoute(
+					name: "default",
+					template: "{controller=Home}/{action=Index}/{id?}");
+				routes.MapRoute(
+					name: "backofficecatchall",
+					template: "admin/{*url}",
+					defaults: new { Controller = "backoffice", action = "index" });
+			});
+		}
+	}
 }

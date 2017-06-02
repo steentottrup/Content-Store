@@ -1,0 +1,4 @@
+﻿<h2>Tree</h2>
+<ul data-bind="foreach: nodes">
+	<li><a href="#" data-bind="text: name, attr: { 'href': '/admin/dashboard/' + $parent.tree() + '/' + id }, click: $parent.showEditor"></a></li>
+</ul>

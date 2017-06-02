@@ -1,5 +1,6 @@
 ﻿using ContentStore.Domain;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -9,9 +10,9 @@ namespace ContentStore.Infrastructure {
 
 		public abstract String Extension { get; }
 
-		public abstract IContentType Parse(Stream stream, IContentTypeStore contentTypeStore);
+		public abstract IContentType Parse(Stream stream, IReadonlyContentTypeStore contentTypeStore);
 
-		protected virtual IContentType Merge(IContentType primary, String[] parentTypes, IContentTypeStore contentTypeStore) {
+		protected virtual IContentType Merge(IContentType primary, String[] parentTypes, IReadonlyContentTypeStore contentTypeStore) {
 			// TODO: Stop circular reference, somehow!!!
 			if (parentTypes != null && parentTypes.Any()) {
 				// Let's get the least important, least important is last in the array!
@@ -28,17 +29,35 @@ namespace ContentStore.Infrastructure {
 		}
 
 		protected virtual IContentType Merge(IContentType primary, IContentType secondary) {
-			IContentType merged = null;
+			ContentType merged = null;
+			// Is the secondary empty?
 			if (secondary == null) {
+				// Just return the primary then!
 				return primary;
-			} 
+			}
+			// Is the primary empty?
 			else if (primary == null) {
+				// Just return the secondary then!
 				return secondary;
 			}
 			else {
-				merged = primary;
+				// Both have an instance, so, merge time!
+				merged = new ContentType {
+					Name = primary.Name,
+					ParentTypes = primary.ParentTypes
+				};
 
-				// TODO: Per field, overwrite!
+				List<IField> mergedFields = new List<IField>(primary.Fields);
+
+				foreach (IField field in secondary.Fields) {
+					// Does this field already existing in the primary template?
+					if (primary.Fields.Any(f => f.Name == field.Name) == false) {
+						// Nope, let's add it then!
+						mergedFields.Add(field);
+					}
+				}
+
+				merged.Fields = mergedFields;
 			}
 
 			return merged;

@@ -5,7 +5,7 @@ using System.IO;
 namespace ContentStore.Infrastructure {
 
 	public interface IContentTypeParser {
-		IContentType Parse(Stream stream, IContentTypeStore contentTypeStore);
+		IContentType Parse(Stream stream, IReadonlyContentTypeStore contentTypeStore);
 		String Extension { get; }
 	}
 }
